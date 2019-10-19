@@ -23,7 +23,7 @@ public class Main {
                 "gus",
                 "123.456.789-12");;
 
-//        System.out.println(aluno);
+        System.out.println(aluno);
 
     }
 
