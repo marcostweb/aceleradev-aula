@@ -1,10 +1,9 @@
 package br.com.aceleradev.domain;
 
-import br.com.aceleradev.exceptions.NumeroMaximoDeAlunosException;
-
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
+
+import br.com.aceleradev.exceptions.NumeroMaximoDeAlunosException;
 
 public class Disciplina {
 

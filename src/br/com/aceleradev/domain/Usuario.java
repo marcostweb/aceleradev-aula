@@ -4,13 +4,16 @@ import br.com.aceleradev.exceptions.LoginInvalidoException;
 
 import static br.com.aceleradev.utils.MensagemException.LOGIN_MENOR_DE_TRES_CARACTERES;
 
+//import java.time.LocalDate;
+
 public class Usuario {
 
     private String nome;
     private String login;
     private String cpf;
+//    LocalDate firstDayOf2014 = LocalDate.of(2014, Month.JANUARY, 1);
 
-    public Usuario(String nome, String login, String cpf) {
+    public Usuario(String nome, String login, String cpf, int dataNascimento) {
         this.nome = nome;
         setLogin(login);
         this.cpf = cpf;
@@ -27,6 +30,8 @@ public class Usuario {
     public String getLogin() {
         return login;
     }
+    
+    
 
     public void setLogin(String login) {
         if(loginInvalido(login)){
@@ -38,7 +43,7 @@ public class Usuario {
     }
 
     private boolean loginInvalido(String login) {
-        return login.length() <= 3;
+        return login.length() <= 6;
     }
 
     public String getCpf() {
@@ -51,9 +56,10 @@ public class Usuario {
 
     @Override
     public String toString() {
-        return "nome: " + this.nome
-                + "\nlogin: " + this.login
-                + "\ncpf: " + this.cpf + "\n";
+        return "Nome: " + this.nome
+                + "\nLogin: " + this.login
+                + "\nCPF: " + this.cpf + "\n"
+                + "\nIdade: " + this;
     }
 
 }
